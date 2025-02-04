@@ -40,11 +40,11 @@ ORDER BY count DESC
 LIMIT 1; 
 
 -- Engagement Per Post / most popular user
-SELECT user_id, COUNT(TYPE) AS comments
+SELECT user_id, COUNT(TYPE) AS popular
 FROM Notification n 
 WHERE type == 'comment'
 GROUP BY user_id
-ORDER BY comments DESC;
+ORDER BY popular DESC;
 
 -- Most accepted USER
 SELECT sender_id, COUNT(sender_id) AS sender_count, status
